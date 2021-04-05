@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18EEC11F261AF5080034E4F5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEC11E261AF5080034E4F5 /* DataManager.swift */; };
 		A87D1F482614ECD800B9ADC0 /* StateAndDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D1F472614ECD800B9ADC0 /* StateAndDataFlowApp.swift */; };
 		A87D1F4A2614ECD800B9ADC0 /* TimeCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87D1F492614ECD800B9ADC0 /* TimeCounterView.swift */; };
 		A87D1F4C2614ECDC00B9ADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A87D1F4B2614ECDC00B9ADC0 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18EEC11E261AF5080034E4F5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A87D1F442614ECD800B9ADC0 /* StateAndDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAndDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A87D1F472614ECD800B9ADC0 /* StateAndDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndDataFlowApp.swift; sourceTree = "<group>"; };
 		A87D1F492614ECD800B9ADC0 /* TimeCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounterView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				A88B3FF52614FEF6007A756A /* StarterView.swift */,
 				A87D1F572614F61400B9ADC0 /* TimeCounter.swift */,
 				A88B3FF22614FD39007A756A /* UserManager.swift */,
+				18EEC11E261AF5080034E4F5 /* DataManager.swift */,
 				A87D1F4B2614ECDC00B9ADC0 /* Assets.xcassets */,
 				A87D1F502614ECDC00B9ADC0 /* Info.plist */,
 				A87D1F4D2614ECDC00B9ADC0 /* Preview Content */,
@@ -153,6 +156,7 @@
 				A87D1F4A2614ECD800B9ADC0 /* TimeCounterView.swift in Sources */,
 				A88B3FF02614FC41007A756A /* RegisterView.swift in Sources */,
 				A88B3FF62614FEF6007A756A /* StarterView.swift in Sources */,
+				18EEC11F261AF5080034E4F5 /* DataManager.swift in Sources */,
 				A87D1F582614F61400B9ADC0 /* TimeCounter.swift in Sources */,
 				A88B3FF32614FD39007A756A /* UserManager.swift in Sources */,
 				A87D1F482614ECD800B9ADC0 /* StateAndDataFlowApp.swift in Sources */,

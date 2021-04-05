@@ -9,11 +9,11 @@ import SwiftUI
 
 struct TimeCounterView: View {
     @StateObject private var timer = TimeCounter()
-    @EnvironmentObject var user: UserManager
+    @EnvironmentObject var userManager: UserManager
     
     var body: some View {
         VStack {
-            Text("Hi, \(user.name)!")
+            Text("Hi, \(userManager.user.name)!")
                 .font(.title)
                 .offset(x: 0, y: 100)
             Text("\(timer.counter)")
@@ -29,8 +29,7 @@ struct TimeCounterView: View {
     }
     
     private func logOut() {
-        user.isRegister.toggle()
-        user.save()
+        DataManager.shared.clean(userManager: userManager)
     }
 }
 

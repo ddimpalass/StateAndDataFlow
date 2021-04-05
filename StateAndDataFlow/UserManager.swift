@@ -9,12 +9,20 @@ import Combine
 import SwiftUI
 
 class UserManager: ObservableObject {
-    var objectWillChange = PassthroughSubject<UserManager, Never>()
+    @Published var user = User()
     
-    @AppStorage(wrappedValue: "", "name") var name
-    @AppStorage(wrappedValue: false, "isRegister") var isRegister
-    
-    func save() {
-        objectWillChange.send(self)
+    var nameIsValid: Bool {
+        user.name.count > 2
     }
+    
+    init() {}
+    
+    init(user: User) {
+        self.user = user
+    }
+}
+
+struct User: Codable {
+    var name = ""
+    var isRegister = false
 }

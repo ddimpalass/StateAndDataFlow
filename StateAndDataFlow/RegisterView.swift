@@ -8,35 +8,29 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject var user: UserManager
-    @State private var name = ""
-    @State private var charCount = 0
+    @EnvironmentObject var userManager: UserManager
     
     var body: some View {
         VStack {
             HStack {
-                TextField("Enter your name", text: $name)
+                TextField("Enter your name", text: $userManager.user.name)
                     .multilineTextAlignment(.center)
-                    .onChange(of: name) { newName in
-                        charCount = name.count
-                    }
-                Text("\(charCount)")
-                    .foregroundColor(charCount > 2 ? .green : .red)
+                Text("\(userManager.user.name.count)")
+                    .foregroundColor(userManager.nameIsValid ? .green : .red)
             }
             .padding(.horizontal)
             Button(action: logIn) {
                 Image(systemName: "checkmark.circle")
                 Text("Ok")
             }
-            .foregroundColor(charCount > 2 ? .blue : .gray)
+            .disabled(!userManager.nameIsValid)
         }
     }
     
     private func logIn() {
-        if charCount > 2 {
-            user.name = name
-            user.isRegister.toggle()
-            user.save()
+        if !userManager.user.name.isEmpty {
+            userManager.user.isRegister.toggle()
+            DataManager.shared.saveUser(user: userManager.user)
         }
     }
 }
